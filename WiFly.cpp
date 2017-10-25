@@ -207,7 +207,7 @@ boolean WiFly::connect(const char *host, uint16_t port, int timeout)
 {
     char cmd[MAX_CMD_LEN];	
 	timeout = DEFAULT_WAIT_RESPONSE_TIME*5;
-#if 0
+#if 1
     snprintf(cmd, sizeof(cmd), "set d n %s\r", host);
     sendCommand(cmd, "OK");
     snprintf(cmd, sizeof(cmd), "set i r %d\r", port);
