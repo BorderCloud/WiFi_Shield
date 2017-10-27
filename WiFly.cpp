@@ -220,7 +220,6 @@ boolean WiFly::connect(const char *host, uint16_t port, int timeout)
     snprintf(cmd, sizeof(cmd), "open %s %d\r", host, port);
     if (!sendCommand(cmd, "*OPEN*", timeout)) {
 #endif
-
         command_mode = false;
         sendCommand("close\r");
         clear();
